@@ -676,6 +676,7 @@ class Triangle3 extends RenderEngine {
 class AngledLines extends RenderEngine {
   render() {
     let side = this.yi % 2;
+
     let B = this.blk;
     let U = B * (side ? 0.8 : 0.2);
     let Q = B * (!side ? 0.8 : 0.2);

@@ -55,7 +55,7 @@ class Grid {
   fg() {
     if (!this.__fg) {
       this.__fg = this.swatch.random();
-      while (this.__fg == this.__bg) {
+      while (this.__fg === this.__bg) {
         this.__fg = this.swatch.random();
       }
     }
@@ -85,9 +85,9 @@ class Grid {
     for (this.yp = 0; this.yp <= this.h; this.yp += this.blkHeight) {
       this.xi = 0;
       for (this.xp = 0; this.xp <= this.w; this.xp += this.blkWidth) {
-        if (!this.onRecursion()) {
-          this.onRenderItem(this.xp, this.yp, this.blkWidth, this.blkHeight);
-        }
+        // if (!this.onRecursion()) {
+        this.onRenderItem(this.xp, this.yp, this.blkWidth, this.blkHeight);
+        // }
         this.xi++;
       }
       this.yi++;
